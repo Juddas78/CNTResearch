@@ -1,16 +1,13 @@
 #include <stdio.h>
-
-int
-main ()
+  int main ()
 {
-  int i, j, check, count, size, arraysize;
+  int i, j, check, count, arraysize;
   check = 1;
   count = 0;
-  size = 100000;
-  arraysize = 10000;
-  int primes[size];
-  
-  for (i = 2; i < size; i++)
+  arraysize = 1000000;
+  int primes[arraysize];
+  i = 2;
+  while(count < arraysize)
   {
      j = 0;
      check = 1;
@@ -31,6 +28,7 @@ main ()
             j++;    
          }
      }
+     i++;
   }
-      printf("%d is the %dth prime", primes[count-1], count);
+     printf("%d is the %dth prime", primes[count-1], count);
 }
